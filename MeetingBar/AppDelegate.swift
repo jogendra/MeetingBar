@@ -15,6 +15,10 @@ import Defaults
 import KeyboardShortcuts
 import ServiceManagement
 
+extension Notification.Name {
+    static let killLauncher = Notification.Name("killLauncher")
+}
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate {
     var statusBarItem: StatusBarItemControler!
@@ -63,6 +67,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
             setup()
         } else {
             openOnboardingWindow()
+        }
+        
+        let runningApps = NSWorkspace.shared.runningApplications
+        let isRunning = !runningApps.filter { $0.bundleIdentifier == AutoLauncher.bundleIdentifier }.isEmpty
+        if isRunning {
+            DistributedNotificationCenter.default().post(name: .killLauncher,
+                                                         object: Bundle.main.bundleIdentifier!)
         }
     }
 

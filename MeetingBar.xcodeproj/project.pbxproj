@@ -22,16 +22,20 @@
 		148E47E824F400C400399929 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148E47E724F400C400399929 /* OnboardingView.swift */; };
 		148E47EB24F546E700399929 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 148E47EA24F546E700399929 /* Defaults */; };
 		14E4110E246F2F9200F73ACF /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4110D246F2F9200F73ACF /* PreferencesView.swift */; };
-		40DC7054250E5E1000217DD9 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DC7053250E5E1000217DD9 /* ServiceManagement.framework */; };
+		401A21B5252DE0AC00C72551 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DC7053250E5E1000217DD9 /* ServiceManagement.framework */; };
+		401A21B9252DE10A00C72551 /* AutoLauncherHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 407CF5F0252DD25E00FEE414 /* AutoLauncherHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		407CF5F3252DD25F00FEE414 /* AutoLauncherAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CF5F2252DD25F00FEE414 /* AutoLauncherAppDelegate.swift */; };
+		407CF607252DD3BA00FEE414 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CF606252DD3BA00FEE414 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		40DC7050250E5D8D00217DD9 /* CopyFiles */ = {
+		401A21B8252DE0F600C72551 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
+				401A21B9252DE10A00C72551 /* AutoLauncherHelper.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +59,11 @@
 		14879B2A24E6889C00DB0A7E /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		148E47E724F400C400399929 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		14E4110D246F2F9200F73ACF /* PreferencesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		407CF5F0252DD25E00FEE414 /* AutoLauncherHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLauncherHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		407CF5F2252DD25F00FEE414 /* AutoLauncherAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLauncherAppDelegate.swift; sourceTree = "<group>"; };
+		407CF5FB252DD26400FEE414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		407CF5FC252DD26400FEE414 /* AutoLauncherHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoLauncherHelper.entitlements; sourceTree = "<group>"; };
+		407CF606252DD3BA00FEE414 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		40DC7053250E5E1000217DD9 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		E4DD0F0A2529D0D20029E395 /* Project-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
 		E4DD0F0B2529D0D20029E395 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
@@ -66,9 +75,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40DC7054250E5E1000217DD9 /* ServiceManagement.framework in Frameworks */,
+				401A21B5252DE0AC00C72551 /* ServiceManagement.framework in Frameworks */,
 				148E47EB24F546E700399929 /* Defaults in Frameworks */,
 				140D842E248AB2960055E1CE /* KeyboardShortcuts in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		407CF5ED252DD25E00FEE414 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +107,7 @@
 				14158D3A246C65AD0006436C /* README.md */,
 				E4DD0F092529D0D20029E395 /* XCConfig */,
 				144C017B2462D0C3000C9FFC /* MeetingBar */,
+				407CF5F1252DD25E00FEE414 /* AutoLauncherHelper */,
 				144C017A2462D0C3000C9FFC /* Products */,
 				40DC7052250E5E1000217DD9 /* Frameworks */,
 			);
@@ -100,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				144C01792462D0C3000C9FFC /* MeetingBar.app */,
+				407CF5F0252DD25E00FEE414 /* AutoLauncherHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,6 +150,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		407CF5F1252DD25E00FEE414 /* AutoLauncherHelper */ = {
+			isa = PBXGroup;
+			children = (
+				407CF5F2252DD25F00FEE414 /* AutoLauncherAppDelegate.swift */,
+				407CF5FB252DD26400FEE414 /* Info.plist */,
+				407CF5FC252DD26400FEE414 /* AutoLauncherHelper.entitlements */,
+				407CF606252DD3BA00FEE414 /* main.swift */,
+			);
+			path = AutoLauncherHelper;
+			sourceTree = "<group>";
+		};
 		40DC7052250E5E1000217DD9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,8 +189,8 @@
 				144C01752462D0C3000C9FFC /* Sources */,
 				144C01762462D0C3000C9FFC /* Frameworks */,
 				144C01772462D0C3000C9FFC /* Resources */,
-				40DC7050250E5D8D00217DD9 /* CopyFiles */,
 				1421055A251A63B500DA94BD /* Swiftlint */,
+				401A21B8252DE0F600C72551 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -176,18 +205,38 @@
 			productReference = 144C01792462D0C3000C9FFC /* MeetingBar.app */;
 			productType = "com.apple.product-type.application";
 		};
+		407CF5EF252DD25E00FEE414 /* AutoLauncherHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 407CF5FD252DD26400FEE414 /* Build configuration list for PBXNativeTarget "AutoLauncherHelper" */;
+			buildPhases = (
+				407CF5EC252DD25E00FEE414 /* Sources */,
+				407CF5ED252DD25E00FEE414 /* Frameworks */,
+				407CF5EE252DD25E00FEE414 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoLauncherHelper;
+			productName = AutoLauncherHelper;
+			productReference = 407CF5F0252DD25E00FEE414 /* AutoLauncherHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		144C01712462D0C3000C9FFC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Andrii Leitsius";
 				TargetAttributes = {
 					144C01782462D0C3000C9FFC = {
 						CreatedOnToolsVersion = 11.4.1;
+					};
+					407CF5EF252DD25E00FEE414 = {
+						CreatedOnToolsVersion = 12.0;
 					};
 				};
 			};
@@ -209,6 +258,7 @@
 			projectRoot = "";
 			targets = (
 				144C01782462D0C3000C9FFC /* MeetingBar */,
+				407CF5EF252DD25E00FEE414 /* AutoLauncherHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -221,6 +271,13 @@
 				144C01872462D0C5000C9FFC /* Main.storyboard in Resources */,
 				144C01842462D0C5000C9FFC /* Preview Assets.xcassets in Resources */,
 				144C01812462D0C5000C9FFC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		407CF5EE252DD25E00FEE414 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +319,15 @@
 				14E4110E246F2F9200F73ACF /* PreferencesView.swift in Sources */,
 				140D84322493A3FE0055E1CE /* StatusBarItemControler.swift in Sources */,
 				140D84342493A4180055E1CE /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		407CF5EC252DD25E00FEE414 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				407CF607252DD3BA00FEE414 /* main.swift in Sources */,
+				407CF5F3252DD25F00FEE414 /* AutoLauncherAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +521,46 @@
 			};
 			name = Release;
 		};
+		407CF5FE252DD26400FEE414 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AutoLauncherHelper/AutoLauncherHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7P4K4M8A4Q;
+				INFOPLIST_FILE = AutoLauncherHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = leits.AutoLauncherHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		407CF5FF252DD26400FEE414 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AutoLauncherHelper/AutoLauncherHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7P4K4M8A4Q;
+				INFOPLIST_FILE = AutoLauncherHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = leits.AutoLauncherHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -472,6 +578,15 @@
 			buildConfigurations = (
 				144C018D2462D0C5000C9FFC /* Debug */,
 				144C018E2462D0C5000C9FFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		407CF5FD252DD26400FEE414 /* Build configuration list for PBXNativeTarget "AutoLauncherHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				407CF5FE252DD26400FEE414 /* Debug */,
+				407CF5FF252DD26400FEE414 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
